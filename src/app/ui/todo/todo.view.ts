@@ -26,7 +26,7 @@ export class TodoView {
         this.getOptionByUser(readOption)
     }
 
-    async getOptionByUser(option: string): Promise<void> {
+    getOptionByUser(option: string): void {
         switch (option) {
             case Actions.CREATE:
                 this.createAction();
