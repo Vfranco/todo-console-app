@@ -1,14 +1,17 @@
 import { TodoEntitie } from "../../domain/entities/todo.entitie";
-import { ITodo } from "../../domain/interfaces/todo.interface";
+import { ITodoRepository } from "../data/todo.repository";
 
-export class TodoService implements ITodo<TodoEntitie> {
+export class TodoService implements ITodoRepository {
+
+    private dataBase: Array<TodoEntitie> = []
 
     create(payload: TodoEntitie): boolean {
+        this.dataBase.push(payload)
         return true;
     }
 
     read(): TodoEntitie[] {
-        return [];
+        return this.dataBase;
     }
 
     update(index: number, newValue: TodoEntitie): boolean {

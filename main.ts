@@ -1,3 +1,3 @@
-import { Application } from "./src/app/app";
+import { app } from "./src/app/app";
 
-Application.start()
+app.start()

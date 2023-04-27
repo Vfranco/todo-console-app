@@ -1,11 +1,23 @@
+import { TodoService } from "./core/services/todo.service";
+import { View } from "./core/utils/view.manager";
+import { TodoView } from "./ui/todo/todo.view";
 
 export class Application {
+    private view: TodoView;
 
-    constructor() { }
+    constructor(view: TodoView) {
+        this.view = view;
+    }
 
-    static start(): void {
-
+    start(): void {
+        this.view.app()
     }
 }
 
-const app = new Application();
+// Gestor de dependencias
+export const app = new Application(
+    new TodoView(
+        new View,
+        new TodoService
+    )
+);
