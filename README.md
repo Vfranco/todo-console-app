@@ -18,7 +18,7 @@ Victor Daniel Franco Valencia
     cd todo-console-app
 ```
 
-### Ejecutar npm install para la instalación de las dependencias
+### Instalar dependencias
 ```bash
     npm install
 ```
