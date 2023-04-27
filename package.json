@@ -1,0 +1,25 @@
+{
+  "name": "todo-console-app",
+  "version": "1.0.0",
+  "description": "Todo Application Console",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vfranco/todo-console-app.git"
+  },
+  "keywords": [
+    "Git",
+    "Github",
+    "Software",
+    "Uniminuto"
+  ],
+  "author": "Grupo 15",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vfranco/todo-console-app/issues"
+  },
+  "homepage": "https://github.com/Vfranco/todo-console-app#readme"
+}
