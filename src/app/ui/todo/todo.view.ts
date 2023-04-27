@@ -20,7 +20,7 @@ export class TodoView {
         this.viewManager.buildMenu();
         this.viewManager.putWhiteSpace();
 
-        console.log(Localizables.selectOption);
+        this.viewManager.showMessage(Localizables.selectOption);
 
         const readOption = scanf('%s');
         this.getOptionByUser(readOption)
@@ -48,7 +48,7 @@ export class TodoView {
     }
 
     createAction(): void {
-        console.log(Localizables.inputTask);
+        this.viewManager.showMessage(Localizables.inputTask);
         const taskName: TodoEntitie = scanf('%s');
         this.taskManager.create(taskName);
     }
