@@ -23,6 +23,11 @@ Victor Daniel Franco Valencia
     npm install
 ```
 
+### Compilar Aplicación
+```bash
+    npm run build
+```
+
 ### Levantar Aplicación
 ```bash
     npm run start
