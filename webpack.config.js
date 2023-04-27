@@ -20,5 +20,6 @@ module.exports = {
                 loader: "ts-loader"
             }
         ]
-    }
+    },
+    target: "node"
 };

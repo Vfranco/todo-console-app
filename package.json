@@ -4,7 +4,9 @@
   "description": "Todo Application Console",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "npx webpack -w",
+    "build": "npx webpack",
+    "start": "node build/main.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,12 @@
   "bugs": {
     "url": "https://github.com/Vfranco/todo-console-app/issues"
   },
-  "homepage": "https://github.com/Vfranco/todo-console-app#readme"
+  "homepage": "https://github.com/Vfranco/todo-console-app#readme",
+  "dependencies": {
+    "scanf": "^1.1.2",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.81.0",
+    "webpack-cli": "^5.0.2"
+  }
 }
