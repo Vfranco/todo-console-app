@@ -1,4 +1,5 @@
 # Aplicación de Consola - Todo (Uniminuto)
+Actividad de la Semana 6 de la Especialización en desarrollo de Software
 
 ## Integrantes
 
