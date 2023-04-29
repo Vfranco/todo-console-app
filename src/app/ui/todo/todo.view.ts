@@ -41,7 +41,8 @@ export class TodoView {
                 this.app();
                 break;
             case Actions.DELETE:
-                // TODO: hacer logica de eliminación
+                this.deleteAction();
+                this.app();
                 break;
             default:
                 break;
@@ -70,5 +71,12 @@ export class TodoView {
         this.viewManager.showMessage(Localizables.inputNewValueTask);
         const newValue = scanf('%S');
         this.taskManager.update(index, newValue);
-    }
+    }
+
+    deleteAction(): void {
+        this.viewManager.showData(this.taskManager.read());
+        this.viewManager.showMessage(Localizables.deleteMessage);
+        const index = scanf('%s');
+        this.taskManager.delete(index);
+    }
 }

@@ -20,6 +20,7 @@ export class TodoService implements ITodoRepository {
     }
 
     delete(index: number): boolean {
+        this.dataBase.splice(index, 1);
         return true;
     }
 }
