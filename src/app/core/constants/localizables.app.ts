@@ -3,5 +3,7 @@ export enum Localizables {
     selectOption = "Selecciona opcion: ",
     inputTask = "Ingresar Nombre: ",
     data = "data",
-    enter = "Presiona enter para continuar"
+    enter = "Presiona enter para continuar",
+    inputToUpdateTask = "Ingrese indice para actualizar: ",
+    inputNewValueTask = "Ingresar nuevo Nombre: "
 }

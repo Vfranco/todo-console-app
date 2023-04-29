@@ -14,7 +14,8 @@ export class TodoService implements ITodoRepository {
         return this.dataBase;
     }
 
-    update(index: number, newValue: TodoEntitie): boolean {
+    update(index: number, newValue: string): boolean {
+        this.dataBase[index].taskName = newValue;
         return true;
     }
 
