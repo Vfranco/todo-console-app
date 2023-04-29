@@ -37,7 +37,8 @@ export class TodoView {
                 this.app();
                 break;
             case Actions.UPDATE:
-                // TODO: hacer logica de actualización
+                this.updateAction();
+                this.app();
                 break;
             case Actions.DELETE:
                 // TODO: hacer logica de eliminación
@@ -49,8 +50,11 @@ export class TodoView {
 
     createAction(): void {
         this.viewManager.showMessage(Localizables.inputTask);
-        const taskName: TodoEntitie = scanf('%s');
-        this.taskManager.create(taskName);
+        const taskInputName: string = scanf('%S');
+        const taskData: TodoEntitie = {
+            taskName : taskInputName
+        }
+        this.taskManager.create(taskData);
     }
 
     readAction(): void {
@@ -58,4 +62,13 @@ export class TodoView {
         this.viewManager.showMessage(Localizables.enter);
         scanf('%s');
     }
+
+    updateAction(): void {
+        this.viewManager.showData(this.taskManager.read());
+        this.viewManager.showMessage(Localizables.inputToUpdateTask);
+        const index = scanf('%s');
+        this.viewManager.showMessage(Localizables.inputNewValueTask);
+        const newValue = scanf('%S');
+        this.taskManager.update(index, newValue);
+    }
 }

@@ -4,6 +4,7 @@ Actividad de la Semana 6 de la Especialización en desarrollo de Software
 ## Integrantes
 
 Victor Daniel Franco Valencia
+Eva Sandrith Andrades Alarcon
 
 ## Pasos para ejecutar la aplicación
 
