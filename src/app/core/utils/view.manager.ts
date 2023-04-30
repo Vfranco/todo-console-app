@@ -25,15 +25,7 @@ export class View implements IView {
         console.log(msg);
     }
 
-    waitForKey(keyCode: number): Promise<void> {
-        return new Promise(resolve => {
-            process.stdin.on(Localizables.data, (data) => {
-                console.log(data[0]);
-                if (data[0] === keyCode) {
-                    resolve();
-                    process.stdin.pause();
-                }
-            });
-        });
+    clearScreen(): void {
+        console.clear();
     }
 }

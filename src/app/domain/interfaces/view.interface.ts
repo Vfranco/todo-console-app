@@ -4,5 +4,5 @@ export interface IView {
     putWhiteSpace(): void
     showData(data: any): void
     showMessage(msg: string): void
-    waitForKey(key: number): Promise<void>
+    clearScreen(): void
 }
