@@ -44,6 +44,9 @@ export class TodoView {
                 this.deleteAction();
                 this.app();
                 break;
+            case Actions.OUT:
+                this.goOutApplication();
+                break;
             default:
                 break;
         }
@@ -78,5 +81,9 @@ export class TodoView {
         this.viewManager.showMessage(Localizables.deleteMessage);
         const index = scanf('%s');
         this.taskManager.delete(index);
+    }
+
+    goOutApplication(): void {
+        this.viewManager.showMessage(Localizables.outApplication);
     }
 }
