@@ -7,8 +7,12 @@ Victor Daniel Franco Valencia
 Eva Sandrith Andrades Alarcon
 Joham Alexander Castellano Muñoz
 Aldair Alfonso Gonzalez Amaya
+Jhon Leonardo Fernandez Cantor
 
 ## Pasos para ejecutar la aplicación
+
+### Importante:
+Tener instalado NodeJs V 16
 
 ### Clonar aplicación
 
