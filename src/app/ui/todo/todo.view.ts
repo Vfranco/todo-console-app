@@ -15,7 +15,7 @@ export class TodoView {
     }
 
     app(): void {
-        console.clear();
+        this.viewManager.clearScreen();
         this.viewManager.appTitle();
         this.viewManager.buildMenu();
         this.viewManager.putWhiteSpace();

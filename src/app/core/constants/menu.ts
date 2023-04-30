@@ -1,6 +1,6 @@
 export enum MenuApp {
     create = "Crear Tarea",
-    read = "Leer Tarea",
+    read = "Listar Tareas",
     update = "Actualizar Tarea",
     delete = "Eliminar Tarea"
 }
