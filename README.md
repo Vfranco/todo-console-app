@@ -1,5 +1,5 @@
 # Aplicación de Consola - Todo (Uniminuto)
-Actividad de la Semana 7 de la Especialización en desarrollo de Software
+Actividad de la Semana 8 de la Especialización en desarrollo de Software
 
 ## Integrantes
 
