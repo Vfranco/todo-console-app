@@ -1,23 +1,26 @@
 import { TodoService } from "./core/services/todo.service";
-import { View } from "./core/utils/view.manager";
-import { TodoView } from "./ui/todo/todo.view";
+import { Actions } from "./core/utils/actions";
+import { ComponentManager } from "./core/utils/component.manager";
+import { IWebView } from "./domain/interfaces/webview.interface";
+import { TodoWebView } from "./ui/todoweb/todo.web.view";
 
 export class Application {
-    private view: TodoView;
+    private webView: IWebView;
 
-    constructor(view: TodoView) {
-        this.view = view;
+    constructor(webView: IWebView) {
+        this.webView = webView
     }
 
-    start(): void {
-        this.view.app()
+    startWeb(): void {
+        this.webView.webApp();
     }
 }
 
 // Gestor de dependencias
 export const app = new Application(
-    new TodoView(
-        new View,
+    new TodoWebView(
+        new ComponentManager,
+        new Actions,
         new TodoService
     )
 );

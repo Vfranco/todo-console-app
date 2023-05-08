@@ -1,9 +1,9 @@
+import scanf from 'scanf';
 import { Actions } from "../../core/constants/actions";
 import { Localizables } from "../../core/constants/localizables.app";
 import { ITodoRepository } from "../../core/data/todo.repository";
 import { TodoEntitie } from "../../domain/entities/todo.entitie";
 import { IView } from "../../domain/interfaces/view.interface";
-const scanf = require('scanf');
 
 export class TodoView {
     private viewManager: IView;
@@ -73,14 +73,14 @@ export class TodoView {
         const index = scanf('%s');
         this.viewManager.showMessage(Localizables.inputNewValueTask);
         const newValue = scanf('%S');
-        this.taskManager.update(index, newValue);
+        this.taskManager.update(Number(index), newValue);
     }
 
     deleteAction(): void {
         this.viewManager.showData(this.taskManager.read());
         this.viewManager.showMessage(Localizables.deleteMessage);
         const index = scanf('%s');
-        this.taskManager.delete(index);
+        this.taskManager.delete(Number(index));
     }
 
     goOutApplication(): void {

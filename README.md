@@ -39,3 +39,8 @@ Tener instalado NodeJs V 16
 ```bash
     npm run start
 ```
+
+### Ejecutar Pruebas Unitarias
+```bash
+    npm run test
+```

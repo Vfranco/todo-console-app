@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 600px;
+    margin: auto;
+    padding: 10px;
+    height: inherit;
+}
+
+.app {
+    &_title {
+        text-align: center;
+    }
+
+    &_input {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            margin: 5px;
+        }
+
+        input {
+            margin: 5px;
+            padding: 8px;
+            border: 1px solid #CCC;
+            border-radius: 4px;
+        }
+    }
+
+    &_input_action {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            padding: 10px;
+            background-color: #2b81eb;
+            border: 1px solid #2b81eb;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #1e6fd2;
+            }
+        }
+    }
+
+    &_list {
+        padding: 10px;
+    }
+}
+
+.app_list {
+    ul {
+        li {
+            display: flex;
+            justify-content: space-between;
+            margin: 8px;
+        }
+    }
+
+    &_button {
+        background-color: red;
+        border: 1px solid red;
+        color: white;
+        padding: 8px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+}
