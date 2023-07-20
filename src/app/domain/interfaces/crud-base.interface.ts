@@ -1,4 +1,4 @@
-export interface ITodo<T> {
+export interface ICrudBase<T> {
     create(payload: T): boolean
     read(): Array<T>
     update(index: number, newValue: string): boolean
