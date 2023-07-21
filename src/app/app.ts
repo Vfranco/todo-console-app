@@ -1,3 +1,5 @@
+import { InMemoryRepository } from "./core/data/in-memory.repository";
+import { LocalStorageRepository } from "./core/data/local-storage.repository";
 import { TodoService } from "./core/services/todo.service";
 import { Actions } from "./core/utils/actions";
 import { ComponentManager } from "./core/utils/component.manager";
@@ -21,6 +23,9 @@ export const app = new Application(
     new TodoWebView(
         new ComponentManager,
         new Actions,
-        new TodoService
+        new TodoService(
+            // new InMemoryRepository
+            new LocalStorageRepository
+        )
     )
 );

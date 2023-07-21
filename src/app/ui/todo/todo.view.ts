@@ -1,15 +1,15 @@
 import scanf from 'scanf';
 import { Actions } from "../../core/constants/actions";
 import { Localizables } from "../../core/constants/localizables.app";
-import { ITodoRepository } from "../../core/data/todo.repository";
-import { TodoEntitie } from "../../domain/entities/todo.entitie";
+import { TaskEntity } from "../../domain/entities/task.entitie";
 import { IView } from "../../domain/interfaces/view.interface";
+import { ITodoService } from '../../domain/interfaces/todo-service.interface';
 
 export class TodoView {
     private viewManager: IView;
-    private taskManager: ITodoRepository;
+    private taskManager: ITodoService;
 
-    constructor(view: IView, taskManager: ITodoRepository) {
+    constructor(view: IView, taskManager: ITodoService) {
         this.viewManager = view;
         this.taskManager = taskManager;
     }
@@ -55,8 +55,8 @@ export class TodoView {
     createAction(): void {
         this.viewManager.showMessage(Localizables.inputTask);
         const taskInputName: string = scanf('%S');
-        const taskData: TodoEntitie = {
-            taskName : taskInputName
+        const taskData: TaskEntity = {
+            taskName: taskInputName
         }
         this.taskManager.create(taskData);
     }

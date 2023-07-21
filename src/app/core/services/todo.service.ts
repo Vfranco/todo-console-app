@@ -1,26 +1,28 @@
-import { TodoEntitie } from "../../domain/entities/todo.entitie";
-import { ITodoRepository } from "../data/todo.repository";
+import { TaskEntity } from "../../domain/entities/task.entitie";
+import { ICrudBase } from "../../domain/interfaces/crud-base.interface";
+import { ITodoService } from "../../domain/interfaces/todo-service.interface";
 
-export class TodoService implements ITodoRepository {
+export class TodoService implements ITodoService {
 
-    private dataBase: Array<TodoEntitie> = []
+    private storage: ICrudBase<TaskEntity>
 
-    create(payload: TodoEntitie): boolean {
-        this.dataBase.push(payload)
-        return true;
+    constructor(repository: ICrudBase<TaskEntity>) {
+        this.storage = repository
     }
 
-    read(): TodoEntitie[] {
-        return this.dataBase;
+    create(payload: TaskEntity): boolean {
+        return this.storage.create(payload)
+    }
+
+    read(): Array<TaskEntity> {
+        return this.storage.read()
     }
 
     update(index: number, newValue: string): boolean {
-        this.dataBase[index].taskName = newValue;
-        return true;
+        return this.storage.update(index, newValue)
     }
 
     delete(index: number): boolean {
-        this.dataBase.splice(index, 1);
-        return true;
+        return this.storage.delete(index)
     }
 }
